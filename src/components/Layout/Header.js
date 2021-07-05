@@ -4,12 +4,12 @@ import HeaderCartButton from './HeaderCartButton'
 import mealsImage from '../../assets/meals.jpeg'
 import classes from './Header.module.css'
 
-export default function Header() {
+export default function Header({ onShowCart }) {
   return (
     <Fragment>
       <header className={classes.header}>
         <h1>React Meals</h1>
-        <HeaderCartButton />
+        <HeaderCartButton onClick={onShowCart} />
       </header>
       <div className={classes['main-image']}>
         <img src={mealsImage} alt='A table with food' />
